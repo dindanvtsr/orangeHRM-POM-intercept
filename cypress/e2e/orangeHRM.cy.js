@@ -119,6 +119,63 @@ describe ('Directory', () => {
     it('TC_014', () => {
         directoryPage.directoryIntercepts()
         directoryPage.showdirectory()
+        directoryPage.fillName(directoryData.name)
+        directoryPage.searchButton()
+        directoryPage.waitDirectoryData()
+    })
+
+    it('TC_015', () => {
+        directoryPage.directoryIntercepts()
+        directoryPage.showdirectory()
+        directoryPage.fillJob(directoryData.jobTitle)
+        directoryPage.searchButton()
+        directoryPage.waitDirectoryData()
+    })
+
+    it('TC_016', () => {
+        directoryPage.directoryIntercepts()
+        directoryPage.showdirectory()
+        directoryPage.fillLocation(directoryData.location)
+        directoryPage.searchButton()
+        directoryPage.waitDirectoryData()
+    })
+
+    it('TC_017', () => {
+        directoryPage.directoryIntercepts()
+        directoryPage.showdirectory()
+        directoryPage.searchButton()
+        directoryPage.requiredMessage()
+        directoryPage.waitDirectoryDataError()
+    })
+
+    it('TC_018', () => {
+        directoryPage.directoryIntercepts()
+        directoryPage.showdirectory()
+        directoryPage.fillName(directoryData.name)
+        directoryPage.fillJob(directoryData.jobTitle)
+        directoryPage.fillLocation(directoryData.location)
+        directoryPage.resetButton()
+        directoryPage.waitDirectoryData()
+    })
+    it('TC_019', () => {
+        directoryPage.directoryIntercepts()
+        directoryPage.showdirectory()
+        directoryPage.fillName(directoryData.name)
+        directoryPage.resetButton()
+        directoryPage.waitDirectoryData()
+    })
+    it('TC_020', () => {
+        directoryPage.directoryIntercepts()
+        directoryPage.showdirectory()
+        directoryPage.fillJob(directoryData.jobTitle)
+        directoryPage.resetButton()
+        directoryPage.waitDirectoryData()
+    })
+    it('TC_021', () => {
+        directoryPage.directoryIntercepts()
+        directoryPage.showdirectory()
+        directoryPage.fillLocation(directoryData.location)
+        directoryPage.resetButton()
         directoryPage.waitDirectoryData()
     })
 })
